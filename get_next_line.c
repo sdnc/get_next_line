@@ -1,19 +1,19 @@
 #include "get_next_line.h"
 
-char    *append(int fd, char *buf, char *remainder)
+static char *append(int fd, char *buf, char *remainder)
 {
-    int     lines_read;
+    int     bytes_read;
     char    *temp;
 
-    lines_read = 1;
-    while (lines_read != 0)
+    bytes_read = 1;
+    while (bytes_read != 0)
     {
-        lines_read = read(1, buf, BUFFER_SIZE);
-        if (lines_read == -1) // This means that there's an error
+        bytes_read = read(1, buf, BUFFER_SIZE);
+        if (bytes_read == -1) // This means that there's an error
             return (NULL);
-        else if (lines_read == 0) // This means EOF
+        else if (bytes_read == 0) // This means EOF
             break ;
-        buf[lines_read] = '\0';
+        buf[bytes_read] = '\0';
         if (!remainder)
             return (ft_strdup(""));
         temp = remainder;
@@ -45,7 +45,7 @@ static char *extract(char *line)
     return (remainder);
 }
 
-char	*ft_get_next_line(int fd)
+char	*get_next_line(int fd)
 {
     static char *remainder;
     char        *buf;
