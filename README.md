@@ -4,7 +4,7 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Pseudo code](#pseudo)
+- [Pseudo](#pseudo)
 - [Contributing](../CONTRIBUTING.md)
 
 ## About <a name = "about"></a>
@@ -34,25 +34,24 @@ To get the most of out of this projects, students should deepen their understand
 
 ### Static Variables
 
-This project encourages 42 students to dig deeper in two concepts:
-
-
+Static variables have a property of preserving their value even after they are out of scope. In some ways, they work as global variables. Hence, static variables preserve the previous value assigned in the previous scope and are not reinitalied in the new scope.
+```c
+static int answer = 42;
 ```
-Give examples
-```
+
 
 ### File Descriptors
 
-A **file descriptor** is a number that uniquely identifies an open file in a computer's operating system. It describes the data resource (file, website, database) and to access it. 
+A **file descriptor** is a number that uniquely identifies an open file in a computer's operating system. It describes the data resource (file, website, database) and how to access it. 
 
-When a program asks to open a file — or another data resource, like a network socket — the kernel: 
+When a program asks to open a file, or another data resource, like a network socket, the kernel: 
 
 ```c
-1. grants access → 
+1. grants access
 ```
 
 ```c
-2. creates an entry in the global file table → 
+2. creates an entry in the global file table
 ```
 
 ```c
@@ -61,8 +60,15 @@ When a program asks to open a file — or another data resource, like a network 
 When a set of instructions make a successful request to open a file, the kernel returns a file descriptor that points to an entry in the kernel's global file table. The file table entry contains information such as the inode of the file (a.k.a. index node - a description of a file-system objects such as a file or a directory), byte offset, and the access restrictions for that data stream (read-only, write-only, etc.).
 
 <img width="400" height="200" src="https://www.computerhope.com/jargon/f/file-descriptor.jpg">
+
 ## Pseudo <a name = "pseudo"></a>
 
-Add notes about how to use the system.
+This function consists of three files: 
+get_next_line.c - primary file
+get_next_line_utils.c - assisting functions
+get_next_line.h - header file
+
+1️⃣ **Get Next Line**
+
 
 <img width=140px height=70px src="https://static.wixstatic.com/media/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png/v1/fill/w_918,h_508,al_c/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png" alt="42 Adelaide logo"></a>
