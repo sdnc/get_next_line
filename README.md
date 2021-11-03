@@ -86,6 +86,30 @@ There are three variable declarations:
 // What is left after returning the next line
 // This is a static char as it keeps it's value throughout program run-time 
 ```
+If the *fd* < 0 or macro BUFFER_SIZE <= 0, the return is NULL.
 
+Memory must be allocated on the heap for *buffer* in regards to BUFFER_SIZE. Protect malloc to avoid leaks.
+
+*line* is assigned value by calling *read_and_append()*
+
+*buffer* is then freed from the heap and assigned NULL value to clean junk from memory
+
+if *line* is undefined, the return in NULL.
+
+*remainder* is assigned new value by calling *update_next_line()*
+
+Finally, the function returns *line*
+
+
+```c
+	static char *read_and_append(int fd, char *buffer, char *remainder);
+```
+
+Two additional variables are declared:
+
+```c
+		int  bytes_read; //The amount of bytes read
+		char *temp; //A variable that holds a value temporarily
+```
 
 <img width=140px height=70px src="https://static.wixstatic.com/media/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png/v1/fill/w_918,h_508,al_c/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png" alt="42 Adelaide logo"></a>
