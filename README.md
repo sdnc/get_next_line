@@ -111,21 +111,21 @@ Two additional variables are declared:
 ```
 **bytes_read** is set to 1 to enter the following while loop: while **bytes_read** is not equal to 0.
 
-    **bytes_read** is assigned value by calling the "unistd.h" read function with the **fd**, **buffer** and macro-set BUFFER_SIZE.
+**bytes_read** is assigned value by calling the "unistd.h" read function with the **fd**, **buffer** and macro-set BUFFER_SIZE.
 
-    If it returns an error (-1), the function returns (NULL). If it is the end of the file (0 return), it exits the loop.
+If it returns an error (-1), the function returns (NULL). If it is the end of the file (0 return), it exits the loop.
 
-    **buffer** at the index of the **bytes_read** value is assigned a (null)-termination.
+**buffer** at the index of the **bytes_read** value is assigned a (null)-termination.
 
-    If **remainder** is undefined, **remainder** is assigned the value of an empty string using *ft_strdup()*.
+If **remainder** is undefined, **remainder** is assigned the value of an empty string using *ft_strdup()*.
 
-    **temp** takes on the value stored in **remainder**.
+**temp** takes on the value stored in **remainder**.
 
-    **remainder** is then assigned a new value by attaching **buffer** to the end of **temp** using *ft_strjoin()*.
+**remainder** is then assigned a new value by attaching **buffer** to the end of **temp** using *ft_strjoin()*.
 
-    **temp** is freed.
+**temp** is freed.
 
-    if a new-line character is found in **buffer** using *ft_strchr()*, the loop breaks.
+if a new-line character is found in **buffer** using *ft_strchr()*, the loop breaks.
 
 The function returns the static char **remainder**.
 
