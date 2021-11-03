@@ -45,7 +45,7 @@ Give examples
 
 A **file descriptor** is a number that uniquely identifies an open file in a computer's operating system. It describes the data resource (file, website, database) and to access it. 
 
-![filedescriptors](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ddf321e1-6386-4a33-a029-7719fa32dbb9/Untitled.png)
+![filedescriptors](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.computerhope.com%2Fjargon%2Ff%2Ffile-descriptor.htm&psig=AOvVaw19O4eWr2m7zrHnTNNd-X5j&ust=1635990817390000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMii9fiK-_MCFQAAAAAdAAAAABAD)
 
 ## Pseudo <a name = "pseudo"></a>
 
