@@ -72,20 +72,17 @@ This function consists of three files:
 This file includes three function: *get_next_line()*, *read_and_append()*, *update_next_line()*
 
 ```c
-	char *get_next_line(int fd);
+char *get_next_line(int fd);
 ```
 
 This function takes a file descriptor(fd) as input as this will be the file where the function will retrieve the next line from. 
 
 There are three variable declarations:
 
-char *line // the line/string to return
-
-char *buffer
-
-static char *remainder 
-// What is left after returning the next line
-// This is a static char as it keeps it's value throughout program run-time 
+```c
+    char *line // the line/string to return
+    char *buffer
+    static char *remainder // What is left after returning the next line
 ```
 If the *fd* < 0 or macro BUFFER_SIZE <= 0, the return is NULL.
 
@@ -102,6 +99,7 @@ if *line* is undefined, the return in NULL.
 Finally, the function returns *line*
 
 
+
 ```c
 static char *read_and_append(int fd, char *buffer, char *remainder);
 ```
@@ -109,8 +107,8 @@ static char *read_and_append(int fd, char *buffer, char *remainder);
 Two additional variables are declared:
 
 ```c
-int  bytes_read; //The amount of bytes read
-char *temp; //A variable that holds a value temporarily
+    int  bytes_read; //The amount of bytes read
+	char *temp; //A variable that holds a value temporarily
 ```
 
 <img width=140px height=70px src="https://static.wixstatic.com/media/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png/v1/fill/w_918,h_508,al_c/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png" alt="42 Adelaide logo"></a>
