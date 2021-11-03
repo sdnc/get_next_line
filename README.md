@@ -97,8 +97,7 @@ if *line* is undefined, the return in NULL.
 *remainder* is assigned new value by calling *update_next_line()*
 
 Finally, the function returns *line*
-
-<br> <br>
+<br>
 
 ```c
 static char *read_and_append(int fd, char *buffer, char *remainder);
@@ -107,8 +106,20 @@ static char *read_and_append(int fd, char *buffer, char *remainder);
 Two additional variables are declared:
 
 ```c
-    int  bytes_read; //The amount of bytes read
-	char *temp; //A variable that holds a value temporarily
+    int bytes_read; //The amount of bytes read
+    char    *temp; //A variable that holds a value temporarily
 ```
+*bytes_read* is set to 1 to enter the following while loop.
 
+While *bytes_read* is not equal to 0, the loop runs.
+
+*bytes_read* is assigned value by calling the "unistd.h" read function with the *fd*, *buffer* and macro-set BUFFER_SIZE.
+
+If it returns an error (-1), the function returns NULL. If it is the end of the file (0 return), it exits the loop.
+
+*buffer* at the index of the *bytes_read* value is assigned a null-termination.
+
+*temp* takes on the value stored in *remainder*
+
+*remainder* is then assigned a new value by attaching *buffer* to the end of **temp** by calling *ft_strjoin()*
 <img width=140px height=70px src="https://static.wixstatic.com/media/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png/v1/fill/w_918,h_508,al_c/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png" alt="42 Adelaide logo"></a>
