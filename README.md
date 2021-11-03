@@ -45,8 +45,21 @@ Give examples
 
 A **file descriptor** is a number that uniquely identifies an open file in a computer's operating system. It describes the data resource (file, website, database) and to access it. 
 
-![filedescriptors](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.computerhope.com%2Fjargon%2Ff%2Ffile-descriptor.htm&psig=AOvVaw19O4eWr2m7zrHnTNNd-X5j&ust=1635990817390000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMii9fiK-_MCFQAAAAAdAAAAABAD)
+When a program asks to open a file — or another data resource, like a network socket — the kernel: 
 
+```c
+1. grants access → 
+```
+
+```c
+2. creates an entry in the global file table → 
+```
+
+```c
+3. provides the software with the location (address) of that entry.
+```
+When a set of instructions make a successful request to open a file, the kernel returns a file descriptor that points to an entry in the kernel's global file table. The file table entry contains information such as the inode of the file (a.k.a. index node - a description of a file-system objects such as a file or a directory), byte offset, and the access restrictions for that data stream (read-only, write-only, etc.).
+<img width="200" height="100" src="https://www.computerhope.com/jargon/f/file-descriptor.jpg">
 ## Pseudo <a name = "pseudo"></a>
 
 Add notes about how to use the system.
