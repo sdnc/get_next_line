@@ -1,11 +1,10 @@
 # Project Title
- <img width=200px height=120px src="https://static.wixstatic.com/media/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png/v1/fill/w_918,h_508,al_c/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png" alt="42 Adelaide logo"></a>
 
 ## Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Usage](#usage)
+- [Pseudo code](#pseudo)
 - [Contributing](../CONTRIBUTING.md)
 
 ## About <a name = "about"></a>
@@ -42,6 +41,8 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo.
 
-## Usage <a name = "usage"></a>
+## Pseudo <a name = "pseudo"></a>
 
 Add notes about how to use the system.
+
+<img width=150px height=70px src="https://static.wixstatic.com/media/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png/v1/fill/w_918,h_508,al_c/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png" alt="42 Adelaide logo"></a>
