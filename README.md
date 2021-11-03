@@ -64,9 +64,12 @@ When a set of instructions make a successful request to open a file, the kernel 
 ## Pseudo Code <a name = "pseudo"></a>
 
 This function consists of three files: 
-- get_next_line.c, primary file
-- get_next_line_utils.c, assisting functions
-- get_next_line.h, header file
+
+1️⃣ get_next_line.c, primary file
+
+2️⃣ get_next_line_utils.c, assisting functions
+
+3️⃣ get_next_line.h, header file
 
 ### 1️⃣   **get_next_line.c**
 This file includes three subfunctions: *get_next_line()*, *read_and_append()*, *update_next_line()*
