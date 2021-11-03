@@ -158,8 +158,8 @@ The function returns the **remainder**.
 
 This file consists of five subfunctions: *ft_strlen()*, *ft_substr()*, *ft_strdup()*, *ft_strjoin()*, *ft_strchr()*
 
-*Quick note: Using constant variables is telling the compiler that you will not be making any changes to the data the variable points to which is a good practice if you won't be directly modifying your input data. In addition to telling the compiler, it is also a helpful hint to the user of the API*
-
+Quick note: *Using constant variables is telling the compiler that you will not be making any changes to the data the variable points to which is a good practice if you won't be directly modifying your input data. In addition to telling the compiler, it is also a helpful hint to the user of the API*
+<br>
 ```c
 	size_t ft_strlen(const char *str);
 ```
@@ -202,5 +202,11 @@ This function is used in *read_and_append()* to look for a new-line character in
 
 ### 3️⃣ **get_next_line.h**
 
+This is the header file to be included at the top of each of the other files so they can access all other subfunctions.
+
+External libraries must be included to assure that *malloc(), free() & read()* can be used.
+
+It could be beneficial to define the macro BUFFER_SIZE in case it does not get defined when the program gets compiled. 
+<br>
 
 <img width=140px height=70px src="https://static.wixstatic.com/media/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png/v1/fill/w_918,h_508,al_c/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png" alt="42 Adelaide logo"></a>
