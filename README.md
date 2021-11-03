@@ -38,61 +38,7 @@ Static variables have a property of preserving their value even after they are o
 static int answer = 42;
 ```
  If a program runs a block of code, exists it and goes on to another part of the program, and then finally calls that same block of code, the static variable will have preserved the previous value of that variable.
- ### Examples
-
-**Using Automatic Variables**
-
-```c
-#include <stdio.h>
-
-int add(int x)
-{
-		int sum = 0;
-		sum += x;
-		return (sum);
-}
-
-int main(void)
-{
-	printf("%d\n", add(5));
-	printf("%d\n", add(5));
-	printf("%d\n", add(5));
-)
-```
-
-**Using Static Variables**
-
-```c
-#include <stdio.h>
-
-int add(int x)
-{
-		static int sum = 0;
-		sum += x;
-		return (sum);
-}
-
-int main(void)
-{
-	printf("%d\n", add(5));
-	printf("%d\n", add(5));
-	printf("%d\n", add(5));
-)
-```
-
-**OUTPUT:**
-
-```c
-	5
-	5
-	5
-```
-
-```c
-	5
-	10
-	15
-```
+ 
 
 ### File Descriptors
 
