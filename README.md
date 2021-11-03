@@ -19,14 +19,14 @@ External functions used: read, malloc, free
 char *get_next_line(int fd);
 ```
 
-### 💻 *Parameters*
+### ⚙️  *Parameters*
 
 - fd: File descriptor to read from
 
-### 💻 *Return value*
+### ◀ *Return value*
 
-Read line: correct behavior.
-NULL: nothing else to read or an error occurred.
+- Read line: correct behavior
+- NULL: nothing else to read or an error occurred
 
 ## Concepts <a name = "concepts"></a>
 
