@@ -13,50 +13,39 @@ Get_next_line is a function that returns a line read from a file descriptor.
 
 External functions used: read, malloc, free
 
-### 💾*Prototype*
+### 💾 *Prototype*
 
 ```c
 char *get_next_line(int fd);
 ```
 
-### 💻*Parameters*
+### 💻 *Parameters*
 
 - fd: File descriptor to read from
 
-### 💻*Return value*
+### 💻 *Return value*
 
 Read line: correct behavior
 NULL: nothing else to read or an error occurred
 
-## Getting Started <a name = "getting_started"></a>
+## Concepts <a name = "concepts"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+To get the most of out of this projects, students should deepen their understanding of two important concepts: static variables and file descriptors.
 
-### Prerequisites
+### Static Variables
 
-What things you need to install the software and how to install them.
+This project encourages 42 students to dig deeper in two concepts:
+
 
 ```
 Give examples
 ```
 
-### Installing
+### File Descriptors
 
-A step by step series of examples that tell you how to get a development env running.
+A **file descriptor** is a number that uniquely identifies an open file in a computer's operating system. It describes the data resource (file, website, database) and to access it. 
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
+![filedescriptors](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ddf321e1-6386-4a33-a029-7719fa32dbb9/Untitled.png)
 
 ## Pseudo <a name = "pseudo"></a>
 
