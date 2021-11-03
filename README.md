@@ -98,8 +98,7 @@ if *line* is undefined, the return in NULL.
 
 Finally, the function returns *line*
 
-                        
-                        
+<br>                    
 ```c
 static char *read_and_append(int fd, char *buffer, char *remainder);
 ```
