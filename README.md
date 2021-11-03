@@ -33,11 +33,66 @@ To get the most of out of this projects, students should deepen their understand
 
 ### Static Variables
 
-Static variables have a property of preserving their value even after they are out of scope. In some ways, they work as global variables. Hence, static variables preserve the previous value assigned in the previous scope and are not reinitalied in the new scope.
+Static variables have a property of preserving their value even after they are out of scope. In some ways, they work as global variables. Hence, static variables preserve the previous value assigned in the previous scope and are not reinitalized in the new scope.
 ```c
 static int answer = 42;
 ```
+ If a program runs a block of code, exists it and goes on to another part of the program, and then finally calls that same block of code, the static variable will have preserved the previous value of that variable.
+ ### Examples
 
+**Using Automatic Variables**
+
+```c
+#include <stdio.h>
+
+int add(int x)
+{
+		int sum = 0;
+		sum += x;
+		return (sum);
+}
+
+int main(void)
+{
+	printf("%d\n", add(5));
+	printf("%d\n", add(5));
+	printf("%d\n", add(5));
+)
+```
+
+**Using Static Variables**
+
+```c
+#include <stdio.h>
+
+int add(int x)
+{
+		static int sum = 0;
+		sum += x;
+		return (sum);
+}
+
+int main(void)
+{
+	printf("%d\n", add(5));
+	printf("%d\n", add(5));
+	printf("%d\n", add(5));
+)
+```
+
+**OUTPUT:**
+
+```c
+	5
+	5
+	5
+```
+
+```c
+	5
+	10
+	15
+```
 
 ### File Descriptors
 
