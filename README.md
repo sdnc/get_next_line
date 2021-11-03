@@ -64,11 +64,11 @@ When a set of instructions make a successful request to open a file, the kernel 
 ## Pseudo <a name = "pseudo"></a>
 
 This function consists of three files: 
-get_next_line.c - primary file
-get_next_line_utils.c - assisting functions
-get_next_line.h - header file
+- get_next_line.c, primary file
+- get_next_line_utils.c, assisting functions
+- get_next_line.h, :wheader file
 
-1️⃣ **Get Next Line**
+1️⃣  **get_next_line.c**
 
 
 <img width=140px height=70px src="https://static.wixstatic.com/media/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png/v1/fill/w_918,h_508,al_c/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png" alt="42 Adelaide logo"></a>
