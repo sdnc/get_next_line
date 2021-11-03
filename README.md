@@ -161,14 +161,14 @@ This file consists of five subfunctions: *ft_strlen()*, *ft_substr()*, *ft_strdu
 Quick note: *Using constant variables is telling the compiler that you will not be making any changes to the data the variable points to which is a good practice if you won't be directly modifying your input data. In addition to telling the compiler, it is also a helpful hint to the user of the API*
 <br>
 ```c
-	size_t ft_strlen(const char *str);
+size_t ft_strlen(const char *str);
 ```
 
 *ft_strlen()* simply counts the bytes in a string and returns the counter. Size_t is used since it represents a size in bytes and also represents an index within the function (Even though size_t was not used for bytes_read in *read_and_append()* as size_t returns an unsigned value and the said function needs to return a negative number in case of error).
 
 
 ```c
-	char *ft_substr(const char *str, size_t start, size_t end);
+char *ft_substr(const char *str, size_t start, size_t end);
 ```
 
 *ft_substr()* creates a new string by receiving a source string as input, a size_t index starting point (start), and a size_t index ending point (end). The new string is equal to everything that is in between start and end of the original str. It returns the new str.
@@ -207,6 +207,6 @@ This is the header file to be included at the top of each of the other files so 
 External libraries must be included to assure that *malloc(), free() & read()* can be used.
 
 It could be beneficial to define the macro BUFFER_SIZE in case it does not get defined when the program gets compiled. 
-<br>
+<br> <br>
 
 <img width=140px height=70px src="https://static.wixstatic.com/media/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png/v1/fill/w_918,h_508,al_c/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png" alt="42 Adelaide logo"></a>
