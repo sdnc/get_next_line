@@ -66,9 +66,25 @@ When a set of instructions make a successful request to open a file, the kernel 
 This function consists of three files: 
 - get_next_line.c, primary file
 - get_next_line_utils.c, assisting functions
-- get_next_line.h, :wheader file
+- get_next_line.h, header file
 
-1️⃣  **get_next_line.c**
+1️⃣   **get_next_line.c**
+This file includes three function: *get_next_line()*, *read_and_append()*, *update_next_line()*
+ 
+```c
+	char *get_next_line(int fd);
+```
 
+This function takes a file descriptor(fd) as input as this will be the file where the function will retrieve the next line from. 
+
+There are three variable declarations:
+
+```c
+	char *line // the line(string) to return
+	char *buffer
+	static char *remainder 
+// What is left after returning the next line
+// This is a static char as it keeps it's value throughout program run-time 
+```
 
 <img width=140px height=70px src="https://static.wixstatic.com/media/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png/v1/fill/w_918,h_508,al_c/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png" alt="42 Adelaide logo"></a>
