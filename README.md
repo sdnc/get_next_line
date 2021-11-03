@@ -68,9 +68,9 @@ This function consists of three files:
 - get_next_line_utils.c, assisting functions
 - get_next_line.h, header file
 
-1️⃣   **get_next_line.c**
+## 1️⃣   **get_next_line.c**
 This file includes three function: *get_next_line()*, *read_and_append()*, *update_next_line()*
- 
+
 ```c
 	char *get_next_line(int fd);
 ```
