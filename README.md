@@ -60,6 +60,7 @@ When a program asks to open a file, or another data resource, like a network soc
 When a set of instructions make a successful request to open a file, the kernel returns a file descriptor that points to an entry in the kernel's global file table. The file table entry contains information such as the inode of the file (a.k.a. index node - a description of a file-system objects such as a file or a directory), byte offset, and the access restrictions for that data stream (read-only, write-only, etc.).
 
 <img width="400" height="200" src="https://www.computerhope.com/jargon/f/file-descriptor.jpg">
+<br><br>
 
 ## Pseudo Code <a name = "pseudo"></a>
 
