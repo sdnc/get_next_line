@@ -75,7 +75,7 @@ This file includes three function: *get_next_line()*, *read_and_append()*, *upda
 char *get_next_line(int fd);
 ```
 
-This function takes a file descriptor(fd) as input as this will be the file where the function will retrieve the next line from
+This function takes a file descriptor(fd) as input as this will be the file where the function will retrieve the next line from.
 
 There are three variable declarations:
 
@@ -84,19 +84,19 @@ There are three variable declarations:
     char *buffer
     static char *remainder // What is left after returning the next line
 ```
-If the **fd** < 0 or macro BUFFER_SIZE <= 0, the return is (NULL)
+If the **fd** < 0 or macro BUFFER_SIZE <= 0, the return is (NULL).
 
 Memory must be allocated on the heap for **buffer** in regards to BUFFER_SIZE. Protect malloc to avoid leaks.
 
-**line** is assigned value by calling *read_and_append()*
+**line** is assigned value by calling *read_and_append()*.
 
-**buffer** is then freed from the heap and assigned (NULL) value to clean junk from memory
+**buffer** is then freed from the heap and assigned (NULL) value to clean junk from memory.
 
-if **line** is undefined, the return in (NULL)
+if **line** is undefined, the return in (NULL).
 
-**remainder** is assigned new value by calling *update_next_line()*
+**remainder** is assigned new value by calling *update_next_line()*.
 
-Finally, the function returns **line**
+Finally, the function returns **line**.
 <br>
 
 ```c
@@ -109,26 +109,24 @@ Two additional variables are declared:
     int bytes_read; //The amount of bytes read
     char    *temp; //A variable that holds a value temporarily
 ```
-**bytes_read** is set to 1 to enter the following while loop
+**bytes_read** is set to 1 to enter the following while loop: while **bytes_read** is not equal to 0.
 
-While **bytes_read** is not equal to 0, the loop runs
+    **bytes_read** is assigned value by calling the "unistd.h" read function with the **fd**, **buffer** and macro-set BUFFER_SIZE.
 
-**bytes_read** is assigned value by calling the "unistd.h" read function with the **fd**, **buffer** and macro-set BUFFER_SIZE
+    If it returns an error (-1), the function returns (NULL). If it is the end of the file (0 return), it exits the loop.
 
-If it returns an error (-1), the function returns (NULL). If it is the end of the file (0 return), it exits the loop.
+    **buffer** at the index of the **bytes_read** value is assigned a (null)-termination.
 
-**buffer** at the index of the **bytes_read** value is assigned a (null)-termination.
+    If **remainder** is undefined, **remainder** is assigned the value of an empty string using *ft_strdup()*.
 
-If **remainder** is undefined, **remainder** is assigned the value of an empty string using *ft_strdup()*
+    **temp** takes on the value stored in **remainder**.
 
-**temp** takes on the value stored in **remainder**
+    **remainder** is then assigned a new value by attaching **buffer** to the end of **temp** using *ft_strjoin()*.
 
-**remainder** is then assigned a new value by attaching **buffer** to the end of **temp** using *ft_strjoin()*
+    **temp** is freed.
 
-**temp** is freed
+    if a new-line character is found in **buffer** using *ft_strchr()*, the loop breaks.
 
-if a new-line character is found in buffer using *ft_strchr()*, the loop breaks
-
-The function returns the static char **remainder**
+The function returns the static char **remainder**.
 
 <img width=140px height=70px src="https://static.wixstatic.com/media/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png/v1/fill/w_918,h_508,al_c/745a58_841e3c76fb5941598a97d2fd9f23ea5c~mv2.png" alt="42 Adelaide logo"></a>
