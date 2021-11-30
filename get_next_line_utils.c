@@ -22,27 +22,37 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
+/* 
+	Creates a substring from string (char const *s) that starts copying the value
+	from *s at starting index with value of start and with a total length of len
+*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	l;
 	char	*substr;
 
 	substr = (char *)malloc(sizeof(char) * (len + 1));
 	if (substr == 0)
 		return (NULL);
 	i = 0;
-	j = 0;
+	l = 0;
 	while (s[i])
 	{
-		if (i >= start && j < len)
-			substr[j++] = s[i];
+		if (i >= start && l < len)
+			substr[l++] = s[i];
 		i++;
 	}
-	substr[j] = '\0';
+	substr[l] = '\0';
 	return (substr);
 }
 
+/*
+	Looks for the first occurence of c in the string *s.
+	If there is no c, the function returns the original string,
+	else if it c is found, it returns the address of the first occurence of c.
+	If c is not found in *s, the function returns 0.
+*/
 char	*ft_strchr(const char *s, int c)
 {
 	if (!c)
@@ -71,6 +81,7 @@ char	*ft_strdup(const char *s)
 	newstr[i] = '\0';
 	return (newstr);
 }
+
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

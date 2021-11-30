@@ -13,6 +13,12 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
+/*
+External libraries must be included to assure that *malloc(), free() & read()* can be used.
+
+It could be beneficial to define the macro BUFFER_SIZE in case it does not get defined when the program gets compiled. 
+*/
+
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 5
 # endif
